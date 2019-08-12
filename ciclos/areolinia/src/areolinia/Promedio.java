@@ -10,6 +10,8 @@ public class Promedio {
 	private String orden = "";
 
 	public void prom() {
+		int rep=0;
+	do {
 		for (int i = 0; i < 5; i++) {
 
 			switch (i) {
@@ -31,16 +33,21 @@ public class Promedio {
 			}
 			edades[i] = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite " + orden + " edad "));
 			promedio += edades[i] / 5;
-			if (edades[i] < promedio) {
-				men = men + edades[i];
-			}
-			if (edades[i] > promedio) {
-				may = may + edades[i];
-			}
 		}
+		for(int j=0;j<5;j++) {
+			if (edades[j] < promedio) {
+				men = men + edades[j]+",";
+			}
+			if (edades[j] > promedio) {
+				may = may + edades[j]+",";
+			}
+		}		
 		JOptionPane.showMessageDialog(null,
 				edades[0] + "\n" + edades[1] + "\n" + edades[2] + "\n" + edades[3] + "\n" + edades[4] + "\n"
 						+ "\n\n Su promedio es : " + promedio + "\n Numero menor : " + men + "\n Numero mayor : "
 						+ may);
-	}
+		rep=JOptionPane.showConfirmDialog(null, "Desea continuar con el programa");
+		}while(rep==1);
+		}
+	
 }

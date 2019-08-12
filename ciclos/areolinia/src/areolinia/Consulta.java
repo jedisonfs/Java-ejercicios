@@ -13,15 +13,15 @@ public class Consulta {
 
 		for (int i = 0; i < ced.length; i++) {
 			do {
-				if (i >=1) {
-					for (int j = (i - 1);  j>=0; j--) {
-						nom[i]=JOptionPane.showInputDialog(null, "Ingrese nombre [" + i  + "]");
-						ced[i] = JOptionPane.showInputDialog(null, "Ingrese numero de cedula [" + i  + "]");
+				if (i >= 1) {
+					for (int j = (i - 1); j >= 0; j--) {
+						nom[i] = JOptionPane.showInputDialog(null, "Ingrese nombre [" + i + "]");
+						ced[i] = JOptionPane.showInputDialog(null, "Ingrese numero de cedula [" + i + "]");
 						if (ced[i].equals(ced[j])) {
 							JOptionPane.showMessageDialog(null, "El numero ingresado ya esta registrado");
-							verf = true;	
-						}else {
-							verf=false;
+							verf = true;
+						} else {
+							verf = false;
 						}
 					}
 				}
@@ -44,4 +44,11 @@ public class Consulta {
 			} while (num.equals(ced[i]));
 		}
 	}
+
+/*public void salir(){
+	int rep=0;
+	do {
+		rep = JOptionPane.showConfirmDialog(null,"Desea continuar en el programa");
+	}while(rep==0);
+}*/
 }

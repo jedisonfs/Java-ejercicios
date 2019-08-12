@@ -31,7 +31,7 @@ public class Metodos {
 			String genero = JOptionPane.showInputDialog("Digite su genero");
 
 			opciones = JOptionPane.showInputDialog(
-					"Elija una opción\n" + "A. BOGOTA - CALI - $ 190000\n " + "B. BOGOTA - MEDELLIN - $ 165000\n"
+					"Elija una opción\n" + "A. BOGOTA - CALI - $ 190000\n" + "B. BOGOTA - MEDELLIN - $ 165000\n"
 							+ "C. BOGOTA - MANIZALES - $ 135000\n" + "D. BOGOTA - BARRANQUILLA - $ 245000\n"
 							+ "E. CALI - BOGOTA - $ 190000\n" + "F. MEDELLIN - BOGOTA - $ 165000\n"
 							+ "G. MANIZALES - BOGOTA - $ 135000\n" + "H. BARRANQUILLA - BOGOTA - $ 2450000\n");
@@ -48,9 +48,9 @@ public class Metodos {
 					neto = tarfport + kilosmas;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
-									+ "Ciudad de destino : CALI \n" + "Valor de tiquete  : 190000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total de neto : " + neto + "\nkilos pasados:" + kil);
+									+ "Ciudad de destino : CALI \n" + "Valor de tiquete  : 190000 \n"
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total de neto : " + neto);
 				} else if (edad > 60 && edad < 70 && pes > 20) {
 					kilosmas = (pes - 20) * 2000;
 					kil = pes - 20;
@@ -60,8 +60,8 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
 									+ "Ciudad de destino : CALI \n" + "Valor de tiquete  : 190000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total de neto : " + neto + "\nkilos pasados:" + kil);
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total de neto : " + neto);
 				}
 				if (edad > 70 && edad < 120) {
 					kil = pes - 20;
@@ -69,8 +69,8 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
 									+ "Ciudad de destino : CALI \n" + "Valor de tiquete  : 190000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total de neto : 190000   \nkilos pasados:" + kil);
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas +"\nkilos pasados:" + kil +"\nValor total de neto : 190000 "  );
 				}
 				break;
 			// BOGOTA - MEDELLIN
@@ -84,8 +84,8 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
 									+ "Ciudad de destino: MEDELLIN \n" + "Valor de tiquete : 165000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 
 				} else if (edad > 60 && edad < 70 && pes > 20) {
 					kilosmas = (pes - 20) * 2000;
@@ -96,16 +96,16 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
 									+ "Ciudad de destino: MEDELLIN \n" + "Valor de tiquete : 165000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 				}
 				if (edad > 70 && edad < 120) {
 					kil = pes - 20;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
 									+ "Ciudad de destino: MEDELLIN \n" + "Valor de tiquete : 165000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : 165000 \nkilos pasados:" + kil);
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas +"\nkilos pasados:" + kil+ "\nValor total del neto : 165000");
 
 				}
 				break;
@@ -119,9 +119,9 @@ public class Metodos {
 					tarfport = 135000 + des;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
-									+ " Ciudad de origen : MANIZALES \n" + "Valor de tiquete : $ 135000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ " Ciudad de destino : MANIZALES\n" + "Valor de tiquete : $ 135000\n "
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 				} else if (edad > 60 && edad < 70 && pes > 20) {
 					kilosmas = (pes - 20) * 2000;
 					kil = pes - 20;
@@ -130,17 +130,17 @@ public class Metodos {
 					tarfport = 0;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
-									+ " Ciudad de origen : MANIZALES \n" + "Valor de tiquete : $ 135000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ " Ciudad de origen : MANIZALES\n" + "Valor de tiquete : $ 135000\n "
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 				}
 				if (edad > 70 && edad < 120) {
 					kil = pes - 20;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
-									+ " Ciudad de origen : MANIZALES \n" + "Valor de tiquete : $ 135000\n "
-									+ "Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : 135000 \nkilos pasados:" + kil);
+									+ " Ciudad de destino : MANIZALES \n" + "Valor de tiquete : $ 135000\n "
+									+ "Valor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas +" \nkilos pasados:" + kil+ "\nValor total del neto : 135000");
 				}
 				break;
 			// BOGOTA - BARRANQUILLA
@@ -153,9 +153,9 @@ public class Metodos {
 					tarfport = 245000 + des;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
-									+ " Ciudad de origen : BARRANQUILLA \n" + "Valor de tiquete : $ 245000 "
-									+ "\n Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\nValor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ " Ciudad de destino : BARRANQUILLA \n" + "Valor de tiquete : $ 245000 "
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 				} else if (edad > 60 && edad < 70 && pes > 20) {
 					kilosmas = (pes - 20) * 2000;
 					kil = pes - 20;
@@ -164,17 +164,17 @@ public class Metodos {
 					tarfport = 0;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
-									+ " Ciudad de origen : BARRANQUILLA \n" + "Valor de tiquete : $ 245000 "
-									+ "\n Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\nValor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ " Ciudad de destino : BARRANQUILLA \n" + "Valor de tiquete : $ 245000 "
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 				}
 				if (edad > 70 && edad < 120) {
 					kil = pes - 20;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BOGOTA \n"
 									+ " Ciudad de origen : BARRANQUILLA \n" + "Valor de tiquete : $ 245000 "
-									+ "\n Valor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\nValor total del neto :  245000  \nkilos pasados:" + kil);
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas +" \nkilos pasados:" + kil+ "\nValor total del neto :  245000 ");
 				}
 				break;
 			// CALI - BOGOTA
@@ -190,8 +190,8 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : CALI \n"
 									+ "Ciudad de destino : BOGOTA \n" + "Valor de tiquete  : 190000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 
 				} else if (edad > 60 && edad < 70 && pes > 20) {
 					kilosmas = (pes - 20) * 2000;
@@ -202,8 +202,8 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : CALI \n"
 									+ "Ciudad de destino : BOGOTA \n" + "Valor de tiquete  : 190000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 
 				}
 				if (edad > 70 && edad < 120) {
@@ -211,8 +211,8 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : CALI \n"
 									+ "Ciudad de destino : BOGOTA \n" + "Valor de tiquete  : 190000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : 190000 \nkilos pasados:" + kil);
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas +" \nkilos pasados:" + kil+ "\nValor total del neto : 190000");
 				}
 				break;
 			// MEDELLIN - BOGOTA
@@ -227,8 +227,8 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : MEDELLIN \n"
 									+ "Ciudad de destino: BOGOTA \n" + "Valor de tiquete : 165000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 
 				} else if (edad > 60 && edad < 70 && pes > 20) {
 					kilosmas = (pes - 20) * 2000;
@@ -239,16 +239,16 @@ public class Metodos {
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : MEDELLIN \n"
 									+ "Ciudad de destino: BOGOTA \n" + "Valor de tiquete : 165000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : " + neto + "\nkilos pasados:" + kil);
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total del neto : " + neto);
 				}
 				if (edad > 70 && edad < 120) {
 					kil = pes - 20;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : MEDELLIN \n"
 									+ "Ciudad de destino: BOGOTA \n" + "Valor de tiquete : 165000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : 165000 \nkilos pasados:" + kil);
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas +" \nkilos pasados:" + kil+ "\nValor total del neto : 165000");
 				}
 				break;
 
@@ -262,9 +262,9 @@ public class Metodos {
 					tarfport = 135000 + des;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : MANIZALES \n"
-									+ " Ciudad de origen : BOGOTA \n" + "Valor de tiquete : $ 135000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del tiquete : " + tarfport + "\nkilos pasados:" + kil);
+									+ " Ciudad de destino : BOGOTA \n" + "Valor de tiquete : $ 135000 "
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas + "\nValor neto : " + tarfport + "\nkilos pasados:" + kil);
 				} else if (edad > 60 && edad < 70 && pes > 20) {
 					kilosmas = (pes - 20) * 2000;
 					kil = pes - 20;
@@ -273,17 +273,17 @@ public class Metodos {
 					tarfport = 0;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : MANIZALES \n"
-									+ " Ciudad de origen : BOGOTA \n" + "Valor de tiquete : $ 135000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del tiquete : " + tarfport + "\nkilos pasados:" + kil);
+									+ " Ciudad de destino : BOGOTA \n" + "Valor de tiquete : $ 135000 "
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas + "\nValor neto : " + tarfport + "\nkilos pasados:" + kil);
 				}
 				if (edad > 70 && edad < 120) {
 					kil = pes - 20;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : MANIZALES \n"
-									+ " Ciudad de origen : BOGOTA \n" + "Valor de tiquete : $ 135000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total del neto : 135000 \nkilos pasados:" + kil);
+									+ " Ciudad de destino : BOGOTA \n" + "Valor de tiquete : $ 135000 "
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas +" \nkilos pasados:" + kil+ "\nValor total del neto : 135000 ");
 				}
 				break;
 			// BARRANQUILLA - BOGOTA
@@ -296,9 +296,9 @@ public class Metodos {
 					tarfport = 2450000 + des;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BARRANQUILLA \n"
-									+ " Ciudad de origen : BOGOTA \n" + "Valor de tiquete : $ 245000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total de tiquete : " + tarfport + "\nkilos pasados:" + kil);
+									+ " Ciudad de destino : BOGOTA \n" + "Valor de tiquete : $ 245000 "
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor neto : " + neto);
 				} else if (edad > 60 && edad < 70 && pes > 20) {
 					kilosmas = (pes - 20) * 2000;
 					kil = pes - 20;
@@ -307,18 +307,18 @@ public class Metodos {
 					tarfport = 0;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BARRANQUILLA \n"
-									+ " Ciudad de origen : BOGOTA \n" + "Valor de tiquete : $ 245000 "
+									+ " Ciudad de destino : BOGOTA \n" + "Valor de tiquete : $ 245000 "
 									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total de tiquete : " + tarfport + "\nkilos pasados:" + kil);
+									+ kilosmas  + "\nkilos pasados:" + kil+ "\nValor total de tiquete : " + tarfport);
 
 				}
 				if (edad > 70 && edad < 120) {
 					kil = pes - 20;
 					JOptionPane.showMessageDialog(null,
 							"Nombres y Apellidos:" + nom + "\nCiudad de origen : BARRANQUILLA \n"
-									+ " Ciudad de origen : BOGOTA \n" + "Valor de tiquete : $ 245000 "
-									+ "\nValor de tarifa aeroportuaria : " + des + "\n Valor de kilos de mas : "
-									+ kilosmas + "\n Valor total de neto : 245000 \nkilos pasados:" + kil);
+									+ " Ciudad de destino : BOGOTA \n" + "Valor de tiquete : $ 245000 "
+									+ "\nValor de tarifa aeroportuaria : " + des + "\nValor de kilos de mas : "
+									+ kilosmas +" \nkilos pasados:" + kil+ "\nValor total de neto : 245000");
 				}
 				break;
 
