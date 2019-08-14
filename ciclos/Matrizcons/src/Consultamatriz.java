@@ -6,7 +6,8 @@ public class Consultamatriz {
 		String buscar = "";
 		int i = 0;
 		boolean ver = false;
-		Double not1,not2,not3,not4;
+	//	Double not1=0,not2=0,not3=0,not4=0;
+		Double prom;
 
 		String datos[][] = {
 
@@ -61,10 +62,6 @@ public class Consultamatriz {
 						"	4.0" } };
 
 		buscar = JOptionPane.showInputDialog(null, "Digite el numero de id");
-		not1=Double.parseDouble(datos[i][4]);
-		not1=Double.parseDouble(datos[i][4]);
-		not1=Double.parseDouble(datos[i][4]);
-		not1=Double.parseDouble(datos[i][4]);
 		do {
 
 			if (datos[i][0].equals(buscar)) {
@@ -74,9 +71,14 @@ public class Consultamatriz {
 			}
 
 		} while (i <= 36 && ver == false);
+		Double not1=Double.parseDouble(datos[i][4]);
+		Double not2=Double.parseDouble(datos[i][5]);
+		Double not3=Double.parseDouble(datos[i][6]);
+		Double not4=Double.parseDouble(datos[i][7]);
+		prom = (not1+not2+not3+not4)/4;
 		if (ver == true) {
-			JOptionPane.showMessageDialog(null, "N, Documento" + datos[i][0] + "\nNombre: " + datos[i][1]
-					+ "\nPrograma de formacion: " + datos[i][2] + "\nSemestre: " + datos[i][3] + "");
+			JOptionPane.showMessageDialog(null, "N, Documento: " + datos[i][0] + "\nNombre: " + datos[i][1]
+					+ "\nPrograma de formacion: " + datos[i][2] + "\nSemestre: " + datos[i][3] + "\nNota 1: "+datos[i][4]+ "\nNota 2: "+datos[i][5]+ "\nNota 3: "+datos[i][6]+ "\nNota 4: "+datos[i][7]+"\nPromedio: "+prom);
 		} else {
 			JOptionPane.showMessageDialog(null, "El dato no esta registrado");
 		}
