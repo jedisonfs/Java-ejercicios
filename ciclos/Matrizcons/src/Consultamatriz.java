@@ -2,15 +2,13 @@ import javax.swing.JOptionPane;
 
 public class Consultamatriz {
 	/// public static void main(String[] args) {
-
 	private String buscar = "", dat = "";
 	private int i = 0;
-	boolean ver = false;
 	private Double prom;
+	
 
-	public String[][] matriz() {
-		String resul="";
-		String datos[][] = {
+
+	private	String datos[][] = {
 
 				{ "51662369", "Sandra Milena Castellanos Marín", "Medicina", "VI", "3,5", "4,0", "3,3", "3,5" },
 				{ "80223220", "Luis Andrés Montoya Montoya", "Ingeniería de Telecomunicaciones", "IV", "3,0", "3,3",
@@ -42,7 +40,7 @@ public class Consultamatriz {
 						"3.5", "	4.5\n" },
 				{ "1020765332", "	Luz Herminda Fonseca Daza	", "Psicología", "	VI", "	4.0	", "4.1	", "3.9",
 						"	4.5\n" },
-				{ "1022357137", "	Rhonald Dahian Jiménez García", "	Ingeniería Civil", "	VI", "	3.5", "	4.0",
+				{ "1022357137", "	Rhonald Dahian Jiménez García", "Ingeniería Civil", "	VI", "	3.5", "	4.0",
 						"	3.3	", "3.5\n" },
 				{ "52263227", "	Edgar Andrés Bejarano Pérez", "	Ingeniería Civil", "	IV", "	3.0", "	3.3", "	4.2",
 						"	4.5\n" },
@@ -79,28 +77,18 @@ public class Consultamatriz {
 				{ "1014218719", "	Bryan Andrés Ortegón", "	Medicina", "IV", "	3.0", "	3.3", "	4.2", "	4.5\n" },
 				{ "1030611565", "Mónica Andrea Plaza Bernal	", "Medicina", "IV", "	3.6,", "	3.8,", "	4.8,",
 						"	4.0" } };
-		        resul=consulta(datos);
 		        
-		        JOptionPane.showMessageDialog(null,resul);
-		promedio(datos);
-		return datos;
-	}
+	
 
-	public double promedio(String dat[][]) {
-		Double not1 = Double.parseDouble(dat[i][4]);
-		Double not2 = Double.parseDouble(dat[i][5]);
-		Double not3 = Double.parseDouble(dat[i][6]);
-		Double not4 = Double.parseDouble(dat[i][7]);
-		prom = (not1 + not2 + not3 + not4) / 4;
-		return prom;
-	}
 
-	public String consulta(String da[][]) {
-		String dat = "";
-		buscar = JOptionPane.showInputDialog(null, "Digite el numero de id");
+
+	public void consulta() {
+		boolean ver=false;
+		
+		buscar = JOptionPane.showInputDialog(null, "Digite el numero de identificación ");
 		do {
 
-			if (da[i][0].equals(buscar)) {
+			if (datos[i][0].equals(buscar)) {
 				ver = true;
 			} else {
 				i++;
@@ -109,20 +97,50 @@ public class Consultamatriz {
 		} while (i <= 36 && ver == false);
 
 		if (ver == true) {
+			prom=(Double.parseDouble(datos[i][4])+Double.parseDouble(datos[i][5])+Double.parseDouble(datos[i][6])+Double.parseDouble(datos[i][7]))/4;
+			
 			JOptionPane.showMessageDialog(null,
-					"N, Documento: " + da[i][0] + "\nNombre: " + da[i][1] + "\nPrograma de formacion: " + da[i][2]
-							+ "\nSemestre: " + da[i][3] + "\nNota 1: " + da[i][4] + "\nNota 2: " + da[i][5]
-							+ "\nNota 3: " + da[i][6] + "\nNota 4: " + da[i][7] + "\nPromedio: " + promedio(da));
+					"N, Documento: " + datos[i][0] + "\nNombre: " + datos[i][1] + "\nPrograma de formacion: " + datos[i][2]
+							+ "\nSemestre: " + datos[i][3] + "\nNota 1: " + datos[i][4] + "\nNota 2: " + datos[i][5]
+							+ "\nNota 3: " + datos[i][6] + "\nNota 4: " + datos[i][7] + "\nPromedio: " + prom+"\n"
+							+transformar(Double.toString(prom).charAt(0))+" Punto "+transformar(Double.toString(prom).charAt(0)));
 		} else {
 			JOptionPane.showMessageDialog(null, "El dato no esta registrado");
 		}
-      return dat;
 	}
 
+	public String transformar(char llega) {
+		String dec="";
+		switch (llega) {
+		case '0':
+			dec="Cero";break;
+		case '1':
+			dec="Uno";break;
+		case '2':
+			dec="Dos";break;
+		case '3':
+			dec="Tres";break;
+		case '4':
+			dec="Cuatro";break;
+		case '5':
+			dec="Cinco";break;
+		case '6':
+			dec="Seis";break;
+		case '7':
+			dec="Siete";break;
+		case '8':
+			dec="Ocho";break;
+		case '9':
+			dec="Nueve";break;
+			
+		
+		}
+		return dec;
+	}
 	public static void main(String[] args) {
 		Consultamatriz ver = new Consultamatriz();
 
 		
-            ver.matriz();
+            ver.consulta();
 	}
 }
