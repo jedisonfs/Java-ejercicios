@@ -31,16 +31,23 @@ public class Reloj1 {
 		gradoshr = hrs * 30 + (min * 0.5);
 		gradosmin = min * 6;
 		result = gradoshr - gradosmin;
+		JOptionPane.showMessageDialog(null, "Su hora en grados es: " +result);
+
 	}
 
 	public void conversionSegundos() {
 		gradoshr = hrs * 30 + (seg * 0.1);
 		gradosseg = 0.1 * seg;
 		result = gradoshr - gradosseg;
+		JOptionPane.showMessageDialog(null, "Su hora en grados es: " +result);
+
 	}
-
-	public void mostar() {
-
+	public void conversionMinutos() {
+		gradosmin= min*0.5+(seg*0.1);
+		gradosseg=0.1*seg;
+		result=gradosmin- gradosseg;
+		
 		JOptionPane.showMessageDialog(null, "Su hora en grados es: " +result);
 	}
+
 }
