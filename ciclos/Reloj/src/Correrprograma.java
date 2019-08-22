@@ -2,9 +2,9 @@ import javax.swing.JOptionPane;
 
 public class Correrprograma {
 	public static void main(String[] args) {
-		Reloj1 mirar = new Reloj1();
-		
-		mirar.ingresoDatos();
 
+		Reloj1 llamar = new Reloj1();
+		llamar.ingresoDatos();
+		llamar.menu();
 	}
 }

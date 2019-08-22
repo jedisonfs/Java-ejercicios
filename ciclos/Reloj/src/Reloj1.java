@@ -1,7 +1,7 @@
 import javax.swing.JOptionPane;
 
 public class Reloj1 {
-	Reloj1 llamar = new Reloj1 ();
+	//Reloj1 llamar = new Reloj1 ();
 	private int min = 0, hrs = 0, seg = 0;
 	private double gradoshr = 0, gradosmin = 0, gradosseg = 0, result = 0;
 	
@@ -53,24 +53,28 @@ public class Reloj1 {
 	public void menu() {
 		int llega = 0;
 
-		llamar.ingresoDatos();
-			int opciones = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite la opcion que desea ver\n\n"
+		//ingresoDatos();
+			int opciones = Integer.parseInt(JOptionPane.showInputDialog(null, "Hora ingresada : "+hrs+":"+min+":"+seg+ "\n\nDigite la opcion que desea ver\n\n"
 					+ " 1. Horas minutos\n 2. Horas segundos\n 3. Minutos segundos\n 4 . Ingresar nueva hora \n 5 . Salir"));
 
 			switch (opciones) {
 			case 1:
-				llamar.conversionHora();
+				conversionHora();
+				menu();
 				break;
 			case 2:
-				llamar.conversionMinutos();
+				conversionMinutos();
 				break;
 			case 3:
-				llamar.conversionSegundos();
+				conversionSegundos();
 				break;
 			case 4:
-				llamar.menu();break;
+				ingresoDatos();
+				menu();
+				break;
 			case 5:
-				System.exit(0);break;
+				System.exit(0);
+				break;
 			}
 	}
 
