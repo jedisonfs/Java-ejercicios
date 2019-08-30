@@ -7,6 +7,8 @@ public class Graficacons extends JFrame implements ActionListener {
 	private JLabel titulo1, titulo2;
 	private JTextField text1;
 	private JTextArea area1;
+	public static String texto="";
+	
 	private String buscar2;
 	private int i = 0;
 	private Double prom;
@@ -108,12 +110,6 @@ public class Graficacons extends JFrame implements ActionListener {
 		text1 = new JTextField();
 		text1.setBounds(200, 27, 150, 20);
 		add(text1);
-		
-		area1 = new JTextArea();
-		area1.setBounds(30, 120, 500,500);
-		area1.setForeground(Color.WHITE);
-		area1.setBackground(Color.BLACK);
-		add(area1);
 
 		boton1 = new JButton("Buscar");
 		boton1.setBounds(360, 27, 90, 20);
@@ -128,7 +124,10 @@ public class Graficacons extends JFrame implements ActionListener {
 	
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == boton1) {
-			 buscar2 =text1.getText();
+			Principal ja = new Principal();
+			ja.setVisible(true);
+
+			buscar2 =text1.getText();
 			area1.setText(consulta(buscar2));
 		}
 		if (e.getSource() == boton2) {
@@ -206,4 +205,10 @@ public class Graficacons extends JFrame implements ActionListener {
 		return dec;
 	}
 		
+	public static void main (String []args) {
+		
+		Graficacons interfaz1 = new Graficacons ();
+		
+		interfaz1.setVisible(true);
+	}
 }
