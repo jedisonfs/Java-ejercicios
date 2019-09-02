@@ -5,14 +5,14 @@ import javax.swing.*;
 public class Graficacons extends JFrame implements ActionListener {
 	private JButton boton1, boton2;
 	private JLabel titulo1, titulo2;
-	private JTextField text1;
+	public JTextField text1;
 	private JTextArea area1;
-	public static String texto="";
+	public static String texto="",rel="";
 	
-	private String buscar2;
+	public String buscar2;
 	private int i = 0;
 	private Double prom;
-	private String datos[][] = {
+	public String datos[][] = {
 
 			{ "51662369", "Sandra Milena Castellanos Marín", "Medicina", "VI", "3,5", "4,0", "3,3", "3,5" },
 			{ "80223220", "Luis Andrés Montoya Montoya", "Ingeniería de Telecomunicaciones", "IV", "3,0", "3,3", "4,2",
@@ -97,6 +97,7 @@ public class Graficacons extends JFrame implements ActionListener {
 		panel.setLayout(null);
 		this.getContentPane().add(panel);
 		
+		
 		setLayout(null);
 		titulo1 = new JLabel("Ingrese el Documento a buscar");
 		titulo1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -123,12 +124,19 @@ public class Graficacons extends JFrame implements ActionListener {
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == boton1) {
-			Principal ja = new Principal();
-			ja.setVisible(true);
+		if (e.getSource() == boton1) {	
 
-			buscar2 =text1.getText();
-			area1.setText(consulta(buscar2));
+			Principal ver = new Principal ();
+			consulta(buscar2 =text1.getText());
+			ver.setVisible(true);
+			ver.area2.setText(rel);
+			
+
+		/*	buscar2 =text1.getText();
+			add(panel2);
+			this.getContentPane().add(panel2);
+			ja.setVisible(true);*/
+
 		}
 		if (e.getSource() == boton2) {
 			System.exit(0);
@@ -140,7 +148,6 @@ public class Graficacons extends JFrame implements ActionListener {
 	// Consulta
 	public String consulta(String buscar) {
 		boolean ver = false;
-		String rel="";
 		 
 		do {
 			if (datos[i][0].equals(buscar)) {
@@ -160,9 +167,10 @@ public class Graficacons extends JFrame implements ActionListener {
 					+ datos[i][5] + "\nNota 3: " + datos[i][6] + "\nNota 4: " + datos[i][7] + "\nPromedio: " + prom
 					+ "\n" + transformar(Double.toString(prom).charAt(0)) + " Punto "
 					+ transformar(Double.toString(prom).charAt(0)));
-		} else {
-			JOptionPane.showMessageDialog(null, "El dato no esta registrado");
-		}
+		} /*else {
+		     rel="Dato no registrado ";
+			//JOptionPane.showMessageDialog(null, "El dato no esta registrado");
+		}*/
 		return rel;
 	}
 
@@ -208,7 +216,8 @@ public class Graficacons extends JFrame implements ActionListener {
 	public static void main (String []args) {
 		
 		Graficacons interfaz1 = new Graficacons ();
-		
+	//	ver.setVisible(true);
+	//	je.consulta(je.text1);
 		interfaz1.setVisible(true);
 	}
 }

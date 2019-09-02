@@ -6,7 +6,7 @@ import java.awt.event.*;
 
 public class Principal extends JFrame /*implements ActionListener*/ {
 	
-	private JTextArea area2;
+	public JTextArea area2;
 	
     public Principal () {
 		
@@ -21,7 +21,8 @@ public class Principal extends JFrame /*implements ActionListener*/ {
 	
 	public void diseño () {
 
-		
+		Graficacons je = new Graficacons();
+
 		JPanel panel2 = new JPanel ();
 		setLayout(null);
 		setBackground(Color.BLACK);
@@ -32,16 +33,21 @@ public class Principal extends JFrame /*implements ActionListener*/ {
 		area2.setBounds(0, 0, 500,500);
 		area2.setForeground(Color.WHITE);
 		area2.setBackground(Color.BLACK);
-		add(area2);		
-		
+		add(area2);	
+		je.consulta(je.rel);
 	}
+	
+	public void actionPerformed ()
 	
 	public static void main(String[] args) {
 
+		
+		Graficacons al=new Graficacons();
 		Principal ver = new Principal ();
-		Graficacons je = new Graficacons();
-
+		
+	//	al.consulta(al.buscar2 =al.text1.getText());	
 		ver.setVisible(true);
+		ver.area2.setText(al.rel);
 	}
 
 }
