@@ -83,7 +83,7 @@ public class Graficacons extends JFrame implements ActionListener {
 	public Graficacons() {
 		
 	    setTitle("Consulta de Notas "); 
-		setBounds(0, 0, 600, 400);
+		setBounds(0, 0, 600, 100);
 		setResizable(false);
 		setLocationRelativeTo(null);
 
