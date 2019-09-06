@@ -18,7 +18,7 @@ public class InterfazInicio extends JFrame implements ActionListener {
 		setTitle("Home");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setIconImage(new ImageIcon(getClass().getResource("/img/icon.png")).getImage());
-		setBounds(0, 0, 600, 400);
+		setBounds(0, 0, 450, 300);
 		setResizable(false);
 		setLocationRelativeTo(null);
 
@@ -40,15 +40,15 @@ public class InterfazInicio extends JFrame implements ActionListener {
 		add(label1);
 		
 		label2=new JLabel("Ingrese No. Documento");
-		label2.setBounds(192,150,150,25);
+		label2.setBounds(160,100,150,25);
 		add(label2);
 		
 		text1 = new JTextField();
-		text1.setBounds(170,180,180,20);
+		text1.setBounds(135,140,180,20);
 		add(text1);
 		
 		boton1= new JButton("Aceptar");
-		boton1.setBounds(190,220,145,40);
+		boton1.setBounds(155,185,145,40);
 		add(boton1);
 		boton1.addActionListener(this);
 	}
