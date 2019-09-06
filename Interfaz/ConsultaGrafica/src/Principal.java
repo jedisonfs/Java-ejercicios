@@ -22,7 +22,7 @@ public class Principal extends JFrame implements ActionListener{
 	
 	public void diseñoArea () {
 
-		Graficacons je = new Graficacons();
+		GraficaCons je = new GraficaCons();
 
 		JPanel panel2 = new JPanel ();
 		setLayout(null);
@@ -40,27 +40,27 @@ public class Principal extends JFrame implements ActionListener{
 		boton1= new JButton ("Nuevo # Documento");
 		boton1.setBounds(90,380,150,40);
 		add(boton1);
-		//boton1.addActionListener(this);
+		boton1.addActionListener(this);
 	
 		boton2=new JButton ("Salir");
 		boton2.setBounds(300,380,150,40);
 		add(boton2);
-		//boton2.addActionListener(this);
+		boton2.addActionListener(this);
 	}
 	
 	public void actionPerformed (ActionEvent e) {
-		if(e.getSource() ==boton1) {
+		if(e.getSource() ==boton2) {
 			System.exit(0);
 		}
-		if(e.getSource()==boton2) {
-			main(true);
+		if(e.getSource()==boton1) {
+			main(null);
 		}
 	}
 	
 	public static void main(String[] args) {
 
 		
-		Graficacons al=new Graficacons();
+		GraficaCons al=new GraficaCons();
 		Principal ver = new Principal ();
 		
 	//	al.consulta(al.buscar2 =al.text1.getText());	

@@ -2,13 +2,13 @@ import java.awt.Color;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Graficacons extends JFrame implements ActionListener {
+public class GraficaCons extends JFrame implements ActionListener {
 	private JButton boton1, boton2;
 	private JLabel titulo1, titulo2;
 	public JTextField text1;
 	private JTextArea area1;
-	public static String texto="",rel="";
-	
+	public static String texto = "", rel = "";
+
 	public String buscar2;
 	private int i = 0;
 	private Double prom;
@@ -80,24 +80,23 @@ public class Graficacons extends JFrame implements ActionListener {
 			{ "1030611565", "Mónica Andrea Plaza Bernal	", "Medicina", "IV", "	3.6,", "	3.8,", "	4.8,",
 					"	4.0" } };
 
-	public Graficacons() {
-		
-	    setTitle("Consulta de Notas "); 
+	public GraficaCons() {
+
+		setTitle("Consulta de Notas ");
 		setBounds(0, 0, 600, 100);
 		setResizable(false);
 		setLocationRelativeTo(null);
 
-		panelInicial ();
+		panelInicial();
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 	}
-	
-	private void panelInicial () {
-		JPanel panel = new JPanel ();
+
+	private void panelInicial() {
+		JPanel panel = new JPanel();
 		panel.setBackground(Color.GREEN);
 		panel.setLayout(null);
 		this.getContentPane().add(panel);
-		
-		
+
 		setLayout(null);
 		titulo1 = new JLabel("Ingrese el Documento a buscar");
 		titulo1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -122,33 +121,26 @@ public class Graficacons extends JFrame implements ActionListener {
 		add(boton2);
 		boton2.addActionListener(this);
 	}
-	
+
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == boton1) {	
+		if (e.getSource() == boton1) {
+				Principal ver = new Principal ();
+				consulta(buscar2 =text1.getText());
+				ver.setVisible(true);
+				ver.area2.setText(rel);
 
-			Principal ver = new Principal ();
-			consulta(buscar2 =text1.getText());
-			ver.setVisible(true);
-			ver.area2.setText(rel);
+
+			}
+			if (e.getSource() == boton2) {
+				System.exit(0);
 			
-
-		/*	buscar2 =text1.getText();
-			add(panel2);
-			this.getContentPane().add(panel2);
-			ja.setVisible(true);*/
-
-		}
-		if (e.getSource() == boton2) {
-			System.exit(0);
 		}
 	}
-
-	
 
 	// Consulta
 	public String consulta(String buscar) {
 		boolean ver = false;
-		 
+
 		do {
 			if (datos[i][0].equals(buscar)) {
 				ver = true;
@@ -167,10 +159,10 @@ public class Graficacons extends JFrame implements ActionListener {
 					+ datos[i][5] + "\nNota 3: " + datos[i][6] + "\nNota 4: " + datos[i][7] + "\nPromedio: " + prom
 					+ "\n" + transformar(Double.toString(prom).charAt(0)) + " Punto "
 					+ transformar(Double.toString(prom).charAt(0)));
-		} /*else {
-		     rel="Dato no registrado ";
-			//JOptionPane.showMessageDialog(null, "El dato no esta registrado");
-		}*/
+		} /*
+			 * else { rel="Dato no registrado "; //JOptionPane.showMessageDialog(null,
+			 * "El dato no esta registrado"); }
+			 */
 		return rel;
 	}
 
@@ -212,12 +204,12 @@ public class Graficacons extends JFrame implements ActionListener {
 		}
 		return dec;
 	}
-		
-	public static void main (String []args) {
-		
-		Graficacons interfaz1 = new Graficacons ();
-	//	ver.setVisible(true);
-	//	je.consulta(je.text1);
+
+	public static void main(String[] args) {
+
+		GraficaCons interfaz1 = new GraficaCons();
+		// ver.setVisible(true);
+		// je.consulta(je.text1);
 		interfaz1.setVisible(true);
 	}
 }
