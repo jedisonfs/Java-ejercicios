@@ -1,4 +1,4 @@
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 public class Correrprograma {
 	public static void main(String[] args) {
