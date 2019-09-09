@@ -53,7 +53,7 @@ public class Principal extends JFrame implements ActionListener{
 			System.exit(0);
 		}
 		if(e.getSource()==boton1) {
-			main(null);
+			GraficaCons.main(null);
 		}
 	}
 	
