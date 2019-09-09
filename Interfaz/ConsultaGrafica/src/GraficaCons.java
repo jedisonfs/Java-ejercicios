@@ -124,16 +124,29 @@ public class GraficaCons extends JFrame implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == boton1) {
-				Principal ver = new Principal ();
-				consulta(buscar2 =text1.getText());
+			buscar2 = text1.getText();
+			boolean verificar = false;
+			do {
+				if (datos[i][0].equals(buscar2)) {
+					verificar = true;
+				} else {
+					i++;
+				}
+			} while (i < 36 && verificar == false);
+
+			if (verificar == true) {
+
+				Principal ver = new Principal();
+				consulta(buscar2 = text1.getText());
 				ver.setVisible(true);
 				ver.area2.setText(rel);
-
-
+			} else {
+				JOptionPane.showMessageDialog(null, "Dato ingresado es erroneo");
 			}
-			if (e.getSource() == boton2) {
-				System.exit(0);
-			
+		}
+		if (e.getSource() == boton2) {
+			System.exit(0);
+
 		}
 	}
 
