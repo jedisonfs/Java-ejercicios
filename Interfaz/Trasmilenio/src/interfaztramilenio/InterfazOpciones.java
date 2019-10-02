@@ -9,38 +9,36 @@ import java.awt.image.*;
 import java.awt.event.*;
 
 public class InterfazOpciones extends JFrame implements ActionListener {
-	
-	private JButton boton1,boton2,boton3;
 
-	public InterfazOpciones (){
-		
+	private JButton botonrecarga, boton2, boton3;
+	private JPanel panel1;
+	private JTextField camrecarga;
+
+	public InterfazOpciones() {
+
 		setTitle("Opciones");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setIconImage(new ImageIcon(getClass().getResource("/img/icon.png")).getImage());
-		setBounds(0, 0, 600, 400);
+		setSize(600, 400);
 		setResizable(false);
+		setLayout(null);
+
 		setLocationRelativeTo(null);
-		
 		aspectoOpciones();
 	}
 
-	public void aspectoOpciones () {
-		
+	public void aspectoOpciones() {
+
 		JPanel panel1 = new JPanel ();
 		panel1.setLayout(null);
 		getContentPane().setBackground(Color.white);
 		this.add(panel1);
 		
-		JPanel panel2= new JPanel();
-		panel2.setBounds(0,0,600,400);
-		this.add(panel2);
-		
-		
 		setLayout(null);
-		boton1 = new JButton ("Recargar tarjeta");
-		boton1.setBounds(80,130,150,30);
-		add(boton1);
-		boton1.addActionListener(this);
+		botonrecarga = new JButton ("Recargar tarjeta");
+		botonrecarga.setBounds(80,130,150,30);
+		add(botonrecarga);
+		botonrecarga.addActionListener(this);
 		
 		boton2 = new JButton ("Ver saldo");
 		boton2.setBounds(80,300,150,30);
@@ -48,13 +46,15 @@ public class InterfazOpciones extends JFrame implements ActionListener {
         boton2.addActionListener(this);
         
         boton3 = new JButton("Personalizar tarjeta");
-        boton3.setBounds(3800,300,170,30);
+        boton3.setBounds(380,300,170,30);
         add(boton3);
         boton3.addActionListener(this);
 	}
 	public void actionPerformed (ActionEvent e) {
-		if(e.getSource()==boton1) {
-			
+		Recarga ver3 = new Recarga();
+		
+		if(e.getSource()==botonrecarga) {
+			ver3.setVisible(true);
 		}
 	}
 	

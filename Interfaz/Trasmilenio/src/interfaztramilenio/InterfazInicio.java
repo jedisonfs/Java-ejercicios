@@ -10,7 +10,7 @@ import java.awt.event.*;
 public class InterfazInicio extends JFrame implements ActionListener {
 	
 	private JLabel label1,label2;
-	private JTextField text1;
+	public JTextField text1;
 	private JButton boton1;
 
 	public InterfazInicio() {
