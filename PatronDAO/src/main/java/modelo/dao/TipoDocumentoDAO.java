@@ -7,8 +7,8 @@ import java.util.Collection;
 public interface TipoDocumentoDAO {
 
      public int insert(TipoDocumentoDTO tipoDocumentoDTO);
-     public int update(TipoDocumentoDTO tipoDocumentoDTO);
-     public int delete(TipoDocumentoDTO tipoDocumentoDTO);
+     public int update(TipoDocumentoDTO tipoDocumentoDTO,String primaryKey);
+     public int delete(String primaryKey);
      public Collection<TipoDocumentoDTO> findByAll();
      public TipoDocumentoDTO findByPk(String primaryKey);
 }
