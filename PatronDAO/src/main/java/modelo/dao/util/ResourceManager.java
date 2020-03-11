@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 
 public class ResourceManager {
 
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/ProyectoMio"+"?useTimezone=true&serverTimezone=UTF";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/ProyectoMio"+"?useTimezone=true&serverTimezone=UTC";
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASSWORD = "123456789";
 
