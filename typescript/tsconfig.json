@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "outDir": "html/dist"
+    "outDir": "html/dist",
+    "experimentalDecorators" :true
   },
   "include": [
     "src"
   ]
+  
 }
