@@ -17,7 +17,7 @@ public class Silla {
     private String color;
 
     @ManyToOne
-    @JoinColumn(name = ("fk_mesa"),nullable = false)
+    @JoinColumn(name = ("mesa_id"),referencedColumnName = ("id"),foreignKey = @ForeignKey(name = ("fk_mesa")),nullable = false)
     private Mesa mesa;
 
     public void setMarca(String marca){

@@ -1,5 +1,7 @@
 package co.edu.sena.mapping.domain;
 
+import org.springframework.context.annotation.EnableMBeanExport;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
@@ -8,7 +10,7 @@ import java.util.List;
 @Table(name = ("mesa"),uniqueConstraints = {@UniqueConstraint(name = "uk_mesa",columnNames = {("name"),("color")})})
 public class Mesa {
 
-    @Id
+    @Id()
     @NotNull
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = ("id"),unique = true)
