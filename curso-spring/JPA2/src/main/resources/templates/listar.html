@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http//:thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <title th:text="${titulo}">Insert title here</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+        <a class="navbar-brand" href="#">Spring Boot-JPA</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item disabled"><a th:href="@{/listar}" class="nav-link" href="#">Home
+					<span class="sr-only">(current)</span>
+			</a></li>
+                <li class="nav-item">
+                    <a th:href="@{/form}" class=" nav-link " href="# ">Formato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-md">
+        <h1 class="h1titulo " th:text="${titulo} "></h1>
+        <hr>
+    </div>
+
+    <div class="container p-5 ">
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">nombre</th>
+                    <th scope="col">apellido</th>
+                    <th scope="col">email</th>
+                    <th scope="col">fecha</th>
+                    <td scope="col">Editar</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr th:each="cl: ${cliente} ">
+                    <td th:text="${cl.id} "></td>
+                    <td th:text="${cl.nombre} "></td>
+                    <td th:text="${cl.apellido} "></td>
+                    <td th:text="${cl.email} "></td>
+                    <td th:text="${cl.fecha} "></td>
+                    <td><a class="btn btn-primary" rol="button" th:href="@{/form/} + ${cl.id}" th:text="'editar'"> Editar </a></td>
+                    <td><a class="btn btn-danger" rol="button" th:href="@{/eliminar/} + ${cl.id}" th:text="'editar'"> Eliminar </a></td>
+
+                </tr>
+            </tbody>
+
+        </table>
+        <!-- 	<a th:@href="{/form} ">crear 	usuario</a> -->
+        <a th:href="@{/form}" class="btn btn-primary" rol="button">Crear usuario</a>
+    </div>
+
+</body>
+
+</html>
