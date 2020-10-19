@@ -1,2 +1,0 @@
-INSERT INTO cliente (id,nombre,apellido,email,fecha) VALUES (1,'Edison', 'Feria Sanabria','edisonferia4@gmail.com','2020-07-15');
-INSERT INTO cliente (id,nombre,apellido,email,fecha) VALUES (2,'Fabian', 'Feria Sanabria','eferia4@gmail.com','2020-07-15');
