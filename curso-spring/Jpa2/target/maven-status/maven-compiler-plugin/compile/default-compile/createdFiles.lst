@@ -1,0 +1,6 @@
+co\edu\sena\testsring\web\models\entity\Cliente.class
+co\edu\sena\testsring\web\service\ClienteService.class
+co\edu\sena\testsring\web\Jpa2Application.class
+co\edu\sena\testsring\web\models\dao\credao\ClienteRepository.class
+co\edu\sena\testsring\web\models\dao\repository\ClienteDao.class
+co\edu\sena\testsring\web\controller\ClienteController.class
