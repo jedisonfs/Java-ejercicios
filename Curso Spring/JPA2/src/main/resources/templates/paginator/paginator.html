@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http//:thymeleaf.org">
+
+<body>
+    <nav arial-label="Page navigation example" th:fragment="paginator">
+
+        <ul class="pagination pagination-sm">
+            <li class="page-item" th:class="${pager.first? 'page-item disabled': 'page-item'}">
+                <span class="page-link" th:if="${pager.first}">Primera pagina</span>
+                <a th:if="${not pager.first}" th:href="@{${pager.url}(page=0)}"></a>
+            </li>
+            <li class="page-item" th:class="${not pager.hasPrevious? 'page-item disabled': 'page-item'}">
+                <span class=" page-link " th:if="${not pager.hasPrevious} ">anterior</span>
+                <a class="page-link " th:if="${pager.hasPrevious} " th:href="@{${pager.url}(page=${pager.paginaActual-2})} ">anterior</a>
+            </li>
+            <li class="page-item " th:each="item : ${pager.paginas} " th:class="${item.actual? 'page-item active': 'page-item'}">
+                <span class="page-link " th:if="${item.actual} " th:text="${item.numero} "></span>
+                <a class="page-link " th:if="${not item.actual} " th:href="@{${pager.url}(page=${item.numero-1})} " th:text="${item.numero} "></a>
+            </li>
+            <!--      <li>
+                <span th:if="${not pager.hasNext()} ">siguiente</span>
+                <a th:if="${pager.hasNext} " th:href="@{${pager.url}(page=${pager.paginaActual})} ">siguiente</a>
+            </li>-->
+            <li class="page-item " th:class="${pager.last? 'page-item disabled': 'page-item'}">
+                <span class=" page-link " th:if="${pager.last} ">ultima</span>
+                <a class="page-link " th:if="${not pager.last} " th:href="@{${pager.url}(page=${pager.totalPaginas-1})} ">ultima</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

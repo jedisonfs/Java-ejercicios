@@ -46,9 +46,10 @@
                     </tbody>
 
                 </table>
-
                 <!-- 	<a th:@href="{/form} ">crear 	usuario</a> -->
-                <a th:href="@{/form} " class="btn btn-primary " rol="button ">Crear usuario</a>
+                <a th:href="@{/form} " class="btn btn-primary btn-sm pg-5 " rol="button ">Crear usuario</a>
+
+                <nav th:replace="paginator/paginator :: paginator"></nav>
             </div>
         </div>
     </div>

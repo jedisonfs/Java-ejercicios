@@ -1,6 +1,7 @@
 package co.edu.sena.testsring.web.controller;
 
 import java.util.Map;
+import java.util.Optional;
 import java.util.logging.Logger;
 
 import javax.validation.Valid;
@@ -8,6 +9,9 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -20,12 +24,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
 
 import co.edu.sena.testsring.web.models.dao.repository.ClienteDao;
 import co.edu.sena.testsring.web.models.entity.Cliente;
 import co.edu.sena.testsring.web.service.ClienteService;
+import co.edu.sena.testsring.web.util.PaginatorReder;
 
 @Controller
 //@RequestMapping("/api")
@@ -41,9 +47,16 @@ public class ClienteController {
 	}
 
 	@RequestMapping(value = "/listar", method = RequestMethod.GET)
-	public String listar(Model model) {
+	public String listar(@RequestParam(name = "page", defaultValue = "0") int page , Model model) {
+		
+		Pageable pageableRequest = PageRequest.of(page, 5);
+		
+		Page<Cliente> clientes =  clienteService.findAll(pageableRequest);
+		
+		PaginatorReder pageRender = new PaginatorReder("/listar", clientes);
 		model.addAttribute("titulo", "Listado de clientes");
-		model.addAttribute("cliente", clienteService.findAll());
+		model.addAttribute("cliente", clientes);
+		model.addAttribute("pager", pageRender);
 		return "listar";
 	}
 
@@ -56,7 +69,7 @@ public class ClienteController {
 
 	@RequestMapping(value = "/form/{id}")
 	public String editar(@PathVariable(value = "id") Long id, Map<String, Object> model) {
-		Cliente cliente = null;
+		Optional<Cliente> cliente = null;
 		if (id > 0) {
 			cliente = clienteService.findById(id);
 		} else {
@@ -67,9 +80,9 @@ public class ClienteController {
 		return "form";
 	}
 
-	//@RequestMapping(value = "/form", method = RequestMethod.POST)
+	// @RequestMapping(value = "/form", method = RequestMethod.POST)
 	@PostMapping("/form")
-	public String save(@Valid  Cliente cliente, BindingResult result, Model model, SessionStatus status) {
+	public String save(@Valid Cliente cliente, BindingResult result, Model model, SessionStatus status) {
 		if (result.hasErrors()) {
 			model.addAttribute("titulo", "Formulario de cliente");
 			return "form";
@@ -82,7 +95,7 @@ public class ClienteController {
 	@RequestMapping(value = "/eliminar/{id}")
 	public String delete(@PathVariable Long id) {
 		if (id > 0) {
-			clienteService.delete(id);
+			clienteService.deleteById(id);
 		}
 		return "redirect:listar";
 	}

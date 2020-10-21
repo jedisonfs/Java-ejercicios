@@ -1,9 +1,9 @@
 .h1titulo {
     padding: 5px;
     margin: 10px;
-    border-color: yellow;
     border-radius: 2px;
     font-family: 'Segoe UI';
+    font-weight: bold;
 }
 
 .label {
@@ -13,4 +13,8 @@
 
 .hr {
     color: greenyellow;
+}
+
+.a {
+    padding-bottom: 5px;
 }
