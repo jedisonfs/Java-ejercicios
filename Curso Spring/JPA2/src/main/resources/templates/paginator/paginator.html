@@ -10,19 +10,19 @@
                 <a th:if="${not pager.first}" th:href="@{${pager.url}(page=0)}"></a>
             </li>
             <li class="page-item" th:class="${not pager.hasPrevious? 'page-item disabled': 'page-item'}">
-                <span class=" page-link " th:if="${not pager.hasPrevious} ">anterior</span>
+                <span class=" page-link " th:if="${not pager.hasPrevious}"> &laquo;</span>
                 <a class="page-link " th:if="${pager.hasPrevious} " th:href="@{${pager.url}(page=${pager.paginaActual-2})} ">anterior</a>
             </li>
             <li class="page-item " th:each="item : ${pager.paginas} " th:class="${item.actual? 'page-item active': 'page-item'}">
                 <span class="page-link " th:if="${item.actual} " th:text="${item.numero} "></span>
                 <a class="page-link " th:if="${not item.actual} " th:href="@{${pager.url}(page=${item.numero-1})} " th:text="${item.numero} "></a>
             </li>
-            <!--      <li>
-                <span th:if="${not pager.hasNext()} ">siguiente</span>
-                <a th:if="${pager.hasNext} " th:href="@{${pager.url}(page=${pager.paginaActual})} ">siguiente</a>
+            <!--   <li>
+                <span th:if="${not page.hasNext()} ">&laquo;</span>
+                <a th:if="${page.hasNext} " th:href="@{${pager.url}(page=${pager.paginaActual})} ">&raquo;siguiente</a>
             </li>-->
             <li class="page-item " th:class="${pager.last? 'page-item disabled': 'page-item'}">
-                <span class=" page-link " th:if="${pager.last} ">ultima</span>
+                <span class=" page-link " th:if="${pager.last} ">&Uacute;;</span>
                 <a class="page-link " th:if="${not pager.last} " th:href="@{${pager.url}(page=${pager.totalPaginas-1})} ">ultima</a>
             </li>
         </ul>
