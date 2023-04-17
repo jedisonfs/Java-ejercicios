@@ -1,0 +1,135 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/jedisonfs/Java-ejercicios/blob/develop/Tarea\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import numpy as np\n",
+        "import matplotlib.pyplot as plt\n",
+        "import scipy.stats as ss"
+      ],
+      "metadata": {
+        "id": "9kik18SeNlfV",
+        "outputId": "a286414a-2f55-4cd1-cd0e-2b9546a532d7",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 235
+        }
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-2-f27e35dc9542>\u001b[0m in \u001b[0;36m<cell line: 7>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0my2\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m2\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m \u001b[0mY\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mss\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mnorm\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmu\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msigma\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      8\u001b[0m \u001b[0my\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlinspace\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmu\u001b[0m \u001b[0;34m-\u001b[0m \u001b[0;36m3.5\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0msigma\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmu\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0;36m3.5\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0msigma\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m500\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0mintervalo\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlinspace\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0my1\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0my2\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m100\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'ss' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# p=0.05, n=5, P(Y>=1)\n",
+        "n , p = 5, 0.05\n",
+        "Y = ss.binom(n, p)\n",
+        "#A continuación se calcula 1-f(0)\n",
+        "\n",
+        "round(1 - Y.pmf(0), 4)"
+      ],
+      "metadata": {
+        "id": "wHt9AFvGVicS",
+        "outputId": "110ada8d-2b75-4658-d607-0226817daf63",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 235
+        }
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-4-aa855ab78564>\u001b[0m in \u001b[0;36m<cell line: 3>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;31m# p=0.05, n=5, P(Y>=1)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      2\u001b[0m \u001b[0mn\u001b[0m \u001b[0;34m,\u001b[0m \u001b[0mp\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m5\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m0.05\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 3\u001b[0;31m \u001b[0mY\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mss\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mbinom\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mn\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mp\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      4\u001b[0m \u001b[0;31m#A continuación se calcula 1-f(0)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'ss' is not defined"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "mu = 0\n",
+        "sigma = 1\n",
+        "\n",
+        "y1 = -2\n",
+        "y2 = 2\n",
+        "\n",
+        "Y = ss.norm(mu, sigma)\n",
+        "y = np.linspace(mu - 3.5*sigma, mu + 3.5*sigma,500)\n",
+        "intervalo = np.linspace(y1, y2, 100)\n",
+        "f = Y.pdf(y)\n",
+        "f_intervalo = Y.pdf(intervalo)\n",
+        "plt.plot(y, f)\n",
+        "plt.fill_between(intervalo, 0, f_intervalo)\n",
+        "plt.title('Distribución Normal')\n",
+        "plt.ylabel('f(y)')\n",
+        "plt.xlabel('Valores de y')\n",
+        "plt.show()"
+      ],
+      "metadata": {
+        "id": "DHZuIj7RUZPS",
+        "outputId": "bd8692a6-62c8-4753-a97f-2f0e7bbfdba9",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 235
+        }
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "NameError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-3-f27e35dc9542>\u001b[0m in \u001b[0;36m<cell line: 7>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[0my2\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0;36m2\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      6\u001b[0m \u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 7\u001b[0;31m \u001b[0mY\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mss\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mnorm\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmu\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0msigma\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m      8\u001b[0m \u001b[0my\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlinspace\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mmu\u001b[0m \u001b[0;34m-\u001b[0m \u001b[0;36m3.5\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0msigma\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0mmu\u001b[0m \u001b[0;34m+\u001b[0m \u001b[0;36m3.5\u001b[0m\u001b[0;34m*\u001b[0m\u001b[0msigma\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;36m500\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m      9\u001b[0m \u001b[0mintervalo\u001b[0m \u001b[0;34m=\u001b[0m \u001b[0mnp\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlinspace\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0my1\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0my2\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;36m100\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n",
+            "\u001b[0;31mNameError\u001b[0m: name 'ss' is not defined"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Te damos la bienvenida a Colaboratory",
+      "toc_visible": true,
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
